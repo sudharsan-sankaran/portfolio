@@ -1,0 +1,8 @@
+"use client";
+import { useRef } from "react";
+import profile from "../../content/profile.json";
+
+export function RecruiterView(){
+  const ref=useRef<HTMLDialogElement>(null);
+  return <><button className="recruiter-button" type="button" onClick={()=>ref.current?.showModal()}>Quick profile <span aria-hidden="true">↗</span></button><dialog ref={ref} className="recruiter-dialog" aria-labelledby="quick-title"><div className="dialog-top"><span className="eyebrow">At a glance</span><button className="close-dialog" type="button" onClick={()=>ref.current?.close()} aria-label="Close quick profile">×</button></div><h2 id="quick-title">{profile.name}</h2><p className="dialog-lead">Computer science student with experience in industrial team supervision, building towards data roles in the UK.</p><dl><div><dt>Primary direction</dt><dd>Data Analyst</dd></div><div><dt>Parallel interest</dt><dd>Junior analytics engineering</dd></div><div><dt>Study</dt><dd>{profile.education}<br/>{profile.institution}<br/>{profile.completion}</dd></div><div><dt>Experience</dt><dd>Supervisor, Sai Ram Industries, India<br/>August 2021–August 2025</dd></div><div><dt>Project evidence</dt><dd>R modelling and feature importance; Python Q-learning coursework; Azure and Docker deployment support.</dd></div><div><dt>Developing next</dt><dd>SQL analysis, Power BI reporting and reproducible data workflows.</dd></div></dl><div className="dialog-links"><a href="/#work" onClick={()=>ref.current?.close()}>Explore projects ↘</a><a href={profile.links.linkedin}>LinkedIn ↗</a><a href={profile.links.github}>GitHub ↗</a></div></dialog></>;
+}

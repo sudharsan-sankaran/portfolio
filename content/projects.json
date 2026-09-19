@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "bitcoin-fraud-detection",
+    "title": "Bitcoin fraud detection",
+    "category": "Machine learning",
+    "context": "Academic group project",
+    "summary": "Exploring suspicious patterns in the Elliptic2 network, and the trade-offs behind a model’s predictions.",
+    "role": "Group leader · R modelling and feature importance",
+    "tools": ["R", "caret", "igraph", "CRISP-DM"],
+    "visual": "network",
+    "featured": true,
+    "visible": true,
+    "sections": [
+      {"heading": "The question", "body": "How can graph-derived features help identify suspicious activity, and what does a positive prediction actually tell us? The group project compared Logistic Regression, Random Forest and Gradient Boosting on Elliptic2."},
+      {"heading": "My contribution", "body": "I was the group leader for this academic project and contributed to modelling and feature importance in the consolidated R code. Random Forest impurity importance and Gradient Boosting relative influence helped describe how the models used their input features."},
+      {"heading": "What needs a closer look", "body": "The report describes an 80/20 split and three-fold cross-validation. A row-level split can put observations from the same network component into both training and test sets. Sampling nodes before building the graph can alter structural features differently by label. The script and report also use different seeds, so these reported results need to be reproduced from the same run."},
+      {"heading": "The next useful test", "body": "Hold out complete network components, document the evaluation population and save predictions from the same run. That would support a reproducible precision–recall curve and threshold comparison."}
+    ],
+    "evidence": "elliptic-report",
+    "links": []
+  },
+  {
+    "slug": "q-learning-grid-world",
+    "title": "Q-learning grid world",
+    "category": "Programming",
+    "context": "Python coursework",
+    "summary": "A small learning environment with obstacles and a teleport transition, exploring how rewards influence behaviour.",
+    "role": "Coursework implementation and experiments",
+    "tools": ["Python", "NumPy", "Matplotlib"],
+    "visual": "grid",
+    "featured": false,
+    "visible": true,
+    "sections": [
+      {"heading": "The environment", "body": "A five-by-five grid contains a start, a goal, obstacles and a teleport transition. The code compares learning rates and plots episode rewards and state values."},
+      {"heading": "What I explored", "body": "How an agent learns through its reward signal, and how different learning rates affect the experiment."},
+      {"heading": "The useful lesson", "body": "A repeatable positive teleport reward can increase the score without the agent reaching the goal. Average reward and actual goal completion need to be checked separately."},
+      {"heading": "What I would improve", "body": "Use fixed random seeds, report goal completion separately and test for repeated reward loops. No reproducible performance benchmark is claimed here."}
+    ],
+    "links": []
+  },
+  {
+    "slug": "application-deployment-support",
+    "title": "Application deployment support",
+    "category": "Cloud support",
+    "context": "Collaborative project",
+    "summary": "Supporting Azure and Docker deployment work for a Java Spring Boot and React application.",
+    "role": "Deployment support",
+    "tools": ["Azure", "Docker"],
+    "visual": "deployment",
+    "featured": false,
+    "visible": true,
+    "sections": [
+      {"heading": "The project", "body": "A collaborative application project using Java Spring Boot and React."},
+      {"heading": "My contribution", "body": "I supported the Azure and Docker deployment work. My contribution is presented as deployment support within the team."},
+      {"heading": "Scope of this case study", "body": "No production deployment, user numbers, uptime or performance results are claimed. This page summarises the contribution that I can currently describe."}
+    ],
+    "links": []
+  }
+]
